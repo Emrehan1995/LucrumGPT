@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap");
+
+body {
+  background-color: #ffffff;
+ /* background-image: url("https://i.imgur.com/PFnfpkq.png"); */
+  text-align: center;
+  font-weight: 700;
+}
+
+#hello-wrapper {
+  color: #f75068;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.typewriter {
+  border-right: solid 5px transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 50px;
+  animation:
+  animated-text 1.2s steps(17, end) 1s 1 normal both
+}
+
+/* text animation 
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+*/
+
+#particles-js {
+  height: 100vh;
+}
+
+textarea {
+  border-radius: 20px;  /* Rounded edges */
+  border: 1px solid #ccc;  /* A light grey border */
+  padding: 15px;  /* Uniform padding */
+  width: 90%;  /* Taking up most of the container's width */
+  font-family: 'Source Sans Pro', sans-serif;  /* Specified font */
+  resize: none;  /* Disabling manual resizing of the textarea */
+  outline: none;  /* Removing the default browser outline */
+  transition: box-shadow 0.3s;  /* Smooth transition for shadow */
+  overflow-y: auto;
+}
+
+textarea:focus {
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);  /* A soft shadow when focused */
+}
+
+#bigTextBox {
+  height: 70%;  /* Retain the height you provided for the top textarea */
+}
+
+.lucrumgpt-response-container {
+  position: absolute; 
+  top: 73%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  z-index: 10; 
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0; /* Removed the padding */
+  min-width: 90%;
+  max-height: 80%;
+  height: 33vh;
+  border-radius: 10px; 
+  opacity: 0; /* Initial state: invisible */
+  transition: opacity 1s; /* Duration of the fade effect */
+}
+
+textarea#apiResponse {
+  width: calc(100% - 20px); /* Account for padding */
+  height: calc(100% - 20px); /* Account for padding */
+  padding: 20px; 
+  resize: none; /* This prevents users from manually resizing the textarea */
+  box-sizing: border-box; /* Ensures padding doesn't add to its total dimensions */
+  margin: 0 auto; /* Centers the textarea vertically and horizontally */
+  margin-top: 10px;  /* Adjust this value to your liking */
+  display: block; /* Makes sure it respects margin auto */
+}
+
+.btn-primary {
+  background-color: #f75068;
+  border-color: #f75068;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: #c03b4f; /* Slightly darker gold for hover effect */
+  border-color: #c03b4f;
+}
+
+.btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
