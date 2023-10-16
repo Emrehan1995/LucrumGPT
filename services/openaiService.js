@@ -27,6 +27,7 @@ const openai = new OpenAI({
       res.json(response.choices[0].message.content);
     } catch (error) {
       console.log("OpenAI ERROR!")
+      console.log(error)
       res.status(500).send('An error occurred');
     }
   }
